@@ -27,7 +27,7 @@ export function ContactSection() {
    event.preventDefault();
           const formData = new FormData(event.target);
 
-          formData.append("access_key", "e74fdaf0-a144-48fe-95f3-18e9f80c2a88");
+          formData.append("access_key", "179c369b-d4de-4575-9864-d9fac05025b1");
 try{
           const object = Object.fromEntries(formData);
           const json = JSON.stringify(object);
@@ -111,6 +111,7 @@ try{
                       <Label htmlFor="name">Full Name *</Label>
                       <Input
                         id="name"
+                        name="name"
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         required
@@ -133,24 +134,18 @@ try{
                       <Label htmlFor="phone">Phone Number</Label>
                       <Input
                         id="phone"
+                        name="phone"
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="company">Company Name</Label>
-                      <Input
-                        id="company"
-                        value={formData.company}
-                        onChange={(e) => handleInputChange("company", e.target.value)}
-                      />
-                    </div>
+                    
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="diamondType">Diamond Type *</Label>
-                      <Select onValueChange={(value) => handleInputChange("diamondType", value)}>
+                      <Select name="diamondType" defaultValue="" onValueChange={(value) => handleInputChange("diamondType", value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select diamond type" />
                         </SelectTrigger>
@@ -166,6 +161,7 @@ try{
                       <Label htmlFor="quantity">Estimated Quantity</Label>
                       <Input
                         id="quantity"
+                        name="quantity"
                         placeholder="e.g., 100 carats, 50 pieces"
                         value={formData.quantity}
                         onChange={(e) => handleInputChange("quantity", e.target.value)}
@@ -177,6 +173,7 @@ try{
                     <Label htmlFor="message">Message *</Label>
                     <Textarea
                       id="message"
+                      name="message"
                       placeholder="Please describe your requirements, preferred specifications, timeline, and any other details..."
                       className="min-h-32"
                       value={formData.message}

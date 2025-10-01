@@ -5,7 +5,7 @@ export function AboutSection() {
   const stats = [
     { icon: <Globe className="h-8 w-8 text-primary" />, value: "50+", label: "Countries Served" },
     { icon: <Users className="h-8 w-8 text-primary" />, value: "1000+", label: "Satisfied Clients" },
-    { icon: <Award className="h-8 w-8 text-primary" />, value: "15+", label: "Years Experience" },
+    { icon: <Award className="h-8 w-8 text-primary" />, value: "2+", label: "Years Experience" },
     { icon: <TrendingUp className="h-8 w-8 text-primary" />, value: "99%", label: "Client Satisfaction" },
   ]
 
