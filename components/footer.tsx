@@ -41,6 +41,11 @@ export function Footer() {
                   Contact
                 </a>
               </li>
+              <li>
+                <a href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  Terms & Conditions
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -62,20 +67,13 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">info@elitedaim.com</span>
+                <span className="text-muted-foreground">elitediam76@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">+919023351659</span>
               </div>
-              <div className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" />
-                <span className="text-muted-foreground">
-                  123 Diamond District
-                  <br />
-                  New York, NY 10036
-                </span>
-              </div>
+              
             </div>
           </div>
         </div>

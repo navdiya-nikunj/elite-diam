@@ -22,8 +22,15 @@ export function DiamondTypes() {
       title: "Certified Diamonds",
       description: "All our diamonds come with international certification",
       icon: <Award className="h-8 w-8 text-primary" />,
-      features: ["IGI Certified", "Detailed Reports", "Quality Assured", "Traceable Origin"],
+      features: ["IGI Certified", "GIA Certified","Detailed Reports", "Quality Assured", "Traceable Origin"],
       image: "/diamond-certification-documents-with-magnifying-gl.jpg",
+    },
+    {
+      title: "Non-Certified Diamonds",
+      description: "Purchase diamonds without certification for budget-friendly options",
+      icon: <Award className="h-8 w-8 text-primary" />,
+      features: ["Affordable Options", "Quality Checked", "Variety of Cuts", "Trusted Sources"],
+      image: "/akhilesh-sharma-1Ar-qd7-uMA-unsplash.jpg",
     },
     {
       title: "Custom Solutions",

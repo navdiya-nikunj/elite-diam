@@ -22,11 +22,31 @@ export function ContactSection() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    alert("Thank you for your inquiry! We will contact you soon.")
+  const handleSubmit = async (event: React.FormEvent) => {
+  
+   event.preventDefault();
+          const formData = new FormData(event.target);
+
+          formData.append("access_key", "e74fdaf0-a144-48fe-95f3-18e9f80c2a88");
+try{
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+
+          const response = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: json
+          });
+          const result = await response.json();
+          if (result.success) {
+              alert("Thank you for your inquiry! We will contact you soon.")
+          }}
+          catch(error){
+            alert("There was an error submitting the form. Please try again later.")
+          }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -57,8 +77,8 @@ export function ContactSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">info@elitedaim.com</p>
-                <p className="text-muted-foreground">sales@elitedaim.com</p>
+                <p className="text-muted-foreground">elitediam76@gmail.com</p>
+                
               </CardContent>
             </Card>
 
@@ -70,28 +90,11 @@ export function ContactSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                <p className="text-muted-foreground">+1 (555) 987-6543</p>
+                <p className="text-muted-foreground">+919023351659</p>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  Visit Us
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  123 Diamond District
-                  <br />
-                  New York, NY 10036
-                  <br />
-                  United States
-                </p>
-              </CardContent>
-            </Card>
+            
           </div>
 
           {/* Contact Form */}

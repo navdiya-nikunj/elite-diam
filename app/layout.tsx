@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Elite Daim specializes in exporting premium lab-grown and natural diamonds worldwide. Discover our exceptional collection of certified diamonds.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  }
 }
 
 export default function RootLayout({
